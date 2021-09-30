@@ -21,7 +21,7 @@ const AddUser = (props) => {
             return;
         }
 
-        if(+enteredAge < 0){  //make sure that entered age is converted to number
+        if(+enteredAge <= 0){  //make sure that entered age is converted to number
             setError({
                 title: 'Invalid Age',
                 message: 'please enter valid age (> 0)'
