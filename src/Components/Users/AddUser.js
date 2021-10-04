@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {Fragment, useState} from "react";
 import classes from '../Users/AddUser.module.css';
 import Card from "../UI/Card";
 import Button from "../UI/Button";
@@ -51,7 +51,7 @@ const AddUser = (props) => {
     }
 
     return(
-        <div>
+        <Fragment>
             {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}/>}
         <Card className={classes.input}>
             <form onSubmit={addUserHandler}>
@@ -66,7 +66,7 @@ const AddUser = (props) => {
             
             </form>
         </Card>
-        </div>
+        </Fragment>
     );
 
 };
